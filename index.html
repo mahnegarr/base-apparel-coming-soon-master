@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+  </head>
+  <body>
+    <div class="left-side">
+      <div class="logo">
+        <img src="./images/logo.svg" alt="logo" />
+      </div>
+
+      <div class="main">
+        <h1 class="title">
+          <p>We're</p>
+          coming <br />
+          soon
+        </h1>
+        <p class="info">
+          Hello fellow shoppers! We're currently building our new <br />fashion
+          store. Add your email below to stay up-to-date with <br />
+          announcements and our launch deals.
+        </p>
+      </div>
+
+      <form autocomplete="off">
+        <div class="input-email">
+          <input
+            id="email"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email Address"
+            required
+          />
+          <label for="email">
+            <img
+              class="error-icon"
+              src="./images/icon-error.svg"
+              alt="icon-error"
+            />
+          </label>
+          <button
+            onclick="validated()"
+            class="submit"
+            type="submit"
+            title="submit email"
+            value="submit"
+          >
+            <img src="./images/icon-arrow.svg" alt="icon-arrow" />
+          </button>
+          <p class="error-msg">please provide a valid email</p>
+        </div>
+      </form>
+    </div>
+
+    <div class="right-side">
+      <picture>
+        <source media="(min-width: 375px)" srcset="./images/hero-desktop.jpg" />
+        <img class="mobile-hero" src="./images/hero-mobile.jpg" alt="hero" />
+      </picture>
+    </div>
+  </body>
+</html>

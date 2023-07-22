@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+:root {
+  --Desaturated-Red: hsl(0, 36%, 70%);
+  --Soft-Red: hsl(0, 93%, 68%);
+  --Dark-Grayish-Red: hsl(0, 6%, 24%);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 1260px;
+  font-size: 16px;
+  /* background-image: url(./images/bg-pattern-desktop.svg); */
+  font-family: "Josefin Sans", sans-serif;
+  display: grid;
+  grid-template-columns: 653px 610px;
+  grid-template-rows: 800px;
+}
+
+.left-side {
+  width: 653px;
+  display: grid;
+  margin: 3rem 6rem;
+}
+
+.main > h1 > p {
+  color: var(--Desaturated-Red);
+  font-weight: 300;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+
+.main > h1 {
+  color: var(--Dark-Grayish-Red);
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+
+.info {
+  color: var(--Desaturated-Red);
+  margin-top: 1rem;
+  line-height: 2rem;
+}
+form {
+  display: flex;
+}
+.input-email > input {
+  height: 3rem;
+  border: 1px solid var(--Desaturated-Red);
+  opacity: 0.5;
+  border-radius: 1.5rem;
+  width: 24rem;
+  position: relative;
+}
+.input-email > input::placeholder {
+  color: var(--Desaturated-Red);
+
+  padding-left: 2rem;
+}
+
+#email:focus {
+  border: 1px solid red;
+}
+button {
+  padding: 0.8rem 2.2rem;
+  border: none;
+  border-radius: 1.5rem;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  cursor: pointer;
+  transition: 0.3s;
+  position: absolute;
+  transform: translateX(-90%);
+}
+
+button:hover {
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 80%, 86%));
+}
+
+label img {
+  position: relative;
+  left: -5.5rem;
+  top: 0.5rem;
+  display: none;
+}
+
+.error-msg {
+  color: var(--Soft-Red);
+  margin: 0.7rem 2rem;
+  display: none;
+}
+
+@media (max-width: 375px) {
+  body {
+    background: url(./images/bg-pattern-desktop.svg);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .main {
+    text-align: center;
+    margin-top: 60%;
+  }
+  .input-email {
+    margin: 10% 20%;
+  }
+  .right-side {
+    width: 100%;
+    margin-top: -55rem;
+    margin-left: 10rem;
+    object-fit: contain;
+  }
+}
